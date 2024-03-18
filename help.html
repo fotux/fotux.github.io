@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Holiday</title>
+    <ul class="menu-container">
+      <li class="menu-item"> <a href="index.html">Flights</a></li>
+      <li class="menu-item"> <a href="info.html">Info</a></li>
+      <li class="menu-item"> <a href="about.html">About</a></li>
+      <li class="menu-item"> <a href="services.html">Services</a></li>
+      <li class="menu-item"> <a href="help.html">Help</a></li>
+    </ul>
+  </head>
+  <body>
+
+    <h1 class="help_header"></h1>
+
+    <h1 class="help_text">Fill this <span>Help</span> form if you're facing any issues.</h1>
+    <form class="form_container">  
+      <label for="Full Name">Full name:</label></br>
+      <input class="form__whiteSpace" type="text"></br>
+      <label for="Full Name">Gmail:</label></br>
+      <input class="form__whiteSpace" type="Gmail"></br>
+      <div class="form__text">
+      <label for="Message">Enter message:</label>
+      <input class="form--text" type="textarea">
+      <input type="submit" name="Submit" id="submit_button">
+    </div>
+  </form>
+    <div class="donate__container">
+      <h1 class="donate-header">Donate</h1>
+      <button class="donate-btn donate-btn1">+1€</button>
+      <button class="donate-btn donate-btn2">+2€</button>
+      <button class="donate-btn donate-btn3">+5€</button>
+        <p class="donate-lebel">Total donated money: <span class="donated-number">100</span></p>
+    </div>
+
+    <div class="hidden" id="prompt_custom">
+      <div id="prompt-text">Enter Your Username</div>
+      <input id="prompt-input">
+      <button id="prompt-button">OK</button>
+    </div>
+
+    <footer class="footer__text">
+      <div>Website was made in 2024 @Planes</div>
+    </footer>
+    <script src="script_donate.js"></script>
+  </body>
+</html>
+
+
+

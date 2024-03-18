@@ -1,0 +1,466 @@
+html {
+  font-size: 14px;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.menu-container {
+  background-color: rgb(10, 94, 94);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu-item {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  list-style-type: none;
+}
+
+.menu-item:hover {
+  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+.image-container {
+  position: relative;
+  object-fit: cover;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: rgb(10, 94, 94);
+}
+.image {
+  height: 93vh;
+}
+
+.image-contain {
+  width: 100%;
+}
+
+.image-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.2;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  z-index: 1; /* Set a higher z-index to 
+  opaoverlay on top of the first image */
+}
+
+.flight-text {
+  display: block;
+  text-align: center;
+  background-color: rgb(10, 94, 94);
+  padding: 2.5rem;
+}
+.flight-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 40vh;
+  background-color: rgb(10, 94, 94);
+}
+.flight {
+  margin: 1rem;
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  transition: all 0.3s;
+}
+
+.flight img {
+  max-height: 100%;
+  opacity: 0.8;
+  max-width: 100%;
+  object-fit: fit;
+  background-color: #04383acb;
+  padding: 1rem;
+}
+
+.flight img:hover {
+  transform: scale(1.2);
+  box-shadow: 0.8rem 0.9rem 1rem rgb(10, 0, 0);
+}
+
+.planes_text_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 30rem;
+}
+.plane_text {
+  border-style: inset;
+  border-color: rgb(10, 94, 94);
+  border-width: 0.5rem;
+
+  min-width: 10rem;
+  max-width: 30rem;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.footer__text {
+  height: 3rem;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-top: 1rem;
+}
+/* Making backroung image + text appear on top*/
+.image__container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.image__container img {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  /* mirror effect */
+  transform: scaleX(-1);
+  filter: invert(80%);
+}
+.image-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 3rem;
+  font-size: bold;
+  color: white;
+}
+/* Overlay simple example try out more fancier */
+.image-overlay {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #16dad042;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  font-size: 10rem;
+}
+.image__container:hover .image-overlay {
+  opacity: 1;
+}
+/*////////////////////HELP-page/////////////////////////*/
+.help_header {
+  height: 50rem;
+  background: linear-gradient(#1e707abb, #16dad083), url("images/help.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: #0e9e9742;
+}
+.help_text {
+  display: block;
+  text-align: center;
+  align-content: center;
+  font-size: 2.5rem;
+  border-top: solid 0.3rem black;
+  background-color: #0e9e9742;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e9e9742;
+  height: 40rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+#submit_button {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+}
+#submit_button:hover {
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+}
+
+.form__whiteSpace {
+  font-size: 2rem;
+}
+
+.form__text {
+  display: block;
+  font-size: 2rem;
+  border: solid;
+
+  padding: 50px;
+}
+.form--text {
+  width: 20rem;
+  font-size: 2rem;
+  height: 10rem;
+}
+span {
+  display: inline;
+  border: solid 0.3rem;
+  margin: 2rem;
+  font-size: 4rem;
+  padding: 1rem;
+  font-stretch: extra-expanded;
+  transition: all 0.5s ease-out;
+}
+
+span:hover,
+span:focus {
+  color: #074b47e0;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+.donate__container {
+  display: flex;
+  height: 10rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.donate-header {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.donate-btn {
+  background-color: #000000;
+  color: white;
+  font-size: 3rem;
+  border: 0.3rem solid #16dad083;
+  padding: 0.2rem 0.3rem;
+  transition: background-color 1s ease-out;
+  border-radius: 20%;
+}
+.donate-btn:hover {
+  background-color: #16dad083;
+  color: #000000;
+}
+.donate-lebel {
+  font-size: 3rem;
+}
+
+/*services//////////////////////////////////////////////*/
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.mySlides {
+  display: none;
+}
+.button-previous,
+.button-next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -1rem;
+  padding: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.6s ease;
+  border-radius: 0 0.2rem 0.1rem 0;
+  user-select: none;
+}
+
+.button-next {
+  right: 0;
+  border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.button-previous:hover,
+.button-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow__text {
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 1rem 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+.numbertext {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  position: absolute;
+  top: 2rem;
+}
+.dot__container {
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 0.5 0.5rem;
+  background-color: #04383a;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #0e9e9742;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*ABOUT ...................................*/
+
+.about__container {
+  display: grid;
+  justify-content: end;
+  align-content: end;
+  align-items: end;
+  justify-items: center;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  row-gap: 2rem;
+  background-image: url(images/back1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-item {
+  padding: 10rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.about__text {
+  padding: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  justify-items: stretch;
+  text-decoration: underline overline;
+  background-image: url(images/back1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.air1,
+.air2,
+.air3,
+.air4,
+.air5,
+.air6 {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.air1 {
+  background-image: url(images/air1.png);
+}
+.air2 {
+  background-image: url(images/air2.png);
+}
+.air3 {
+  background-image: url(images/air3.png);
+}
+
+.air4 {
+  background-image: url(images/air4.png);
+}
+
+.air5 {
+  background-image: url(images/air5.png);
+}
+
+.air6 {
+  background-image: url(images/air6.png);
+}
+
+/*INFO ...................................*/
+
+.info-container {
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container h1 {
+  font-size: 2.7rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0.1rem 0.2rem 0.1rem rgb(25, 82, 128);
+}
+.info-container p {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  margin: 3rem;
+}
+.hidden {
+  display: none;
+}
+#prompt_custom {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  border: 0.1rem solid rgb(0, 0, 0);
+  background-color: green;
+  filter: hue-rotate(180deg);
+  padding: 5rem;
+}
+#prompt-text {
+  font-size: 3rem;
+}
+#prompt-input {
+  font-size: 2rem;
+}
+#prompt-button {
+  padding: 1.5rem;
+}

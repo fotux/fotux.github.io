@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Holiday</title>
+    <ul class="menu-container">
+      <li class="menu-item"><a href="index.html">Flights</a></li>
+      <li class="menu-item"><a href="info.html">Info</a></li>
+      <li class="menu-item"><a href="about.html">About</a></li>
+      <li class="menu-item"><a href="services.html">Services</a></li>
+      <li class="menu-item"><a href="help.html">Help</a></li>
+    </ul>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/vac1.jpg" alt="vacation" />
+        <div class="slideshow__text">Vacation 1 - Price per/person: 500€</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/vac2.jpg" alt="vacation" />
+        <div class="slideshow__text">Vacation 2 - Price per/person: 400€</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/vac3.jpg" alt="vacation" />
+        <div class="slideshow__text">Vacation 3 - Price per/person: 200€</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/vac4.jpg" alt="vacation" />
+        <div class="slideshow__text">Vacation 4 - Price per/person: 350€</div>
+      </div>
+      <a class="button-previous" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="button-next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dot__container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <footer class="footer__text">
+      <div>Website was made in 2024 @Planes</div>
+    </footer>
+  </body>
+</html>
